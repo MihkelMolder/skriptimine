@@ -22,3 +22,14 @@ installi - apt-get install git
 2) git remote kontroll
 	git remote -v
 
+Põhikasutamine:
+
+1) pane fail jälgimisele:
+	git add failinimi
+
+2) lisa kirjelduse muudatuse kohta
+	git commit -m "lühikirjelduse lause"
+
+3) lisa kaugrepositoorimi
+	git push -uf skriptimine master
+
