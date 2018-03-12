@@ -16,3 +16,9 @@ installi - apt-get install git
 4) tekita lokaalne repositoorium git süsteemi jaoks antud kaustas
 	git init
 
+1) git remote add nimi aadress
+	git remote add skriptimine https://github.com/kasutajanimi/reponimi.git
+
+2) git remote kontroll
+	git remote -v
+
