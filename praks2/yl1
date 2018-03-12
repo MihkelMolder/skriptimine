@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Tervituse skript
+
+echo -n "Tere, " #ilma reavahetuseta
+echo -n "Mihkel" #ilma reavahetuseta
+echo "!" #reavahetusega
+
+#lõpp
+
