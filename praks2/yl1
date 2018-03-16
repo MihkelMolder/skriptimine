@@ -3,7 +3,8 @@
 #Tervituse skript
 
 echo -n "Tere, " #ilma reavahetuseta
-echo -n "Mihkel" #ilma reavahetuseta
+echo -n `who am i | cut -c1 | tr [:lower:] [:upper:]` #lõika esimest
+echo -n `who am i | cut -c2- | cut -f1 -d" "`
 echo "!" #reavahetusega
 
 #lõpp
