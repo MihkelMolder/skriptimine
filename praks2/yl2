@@ -6,7 +6,7 @@
 
 who | awk -F 'tty*' '{print $1}' > nimed #nimede otsingu käsk
 nimed | awk -F "." '{print $2"."$1}' nimed_2 #kleebib failid järjekorras kokku
-cat nimed2 | sort | uniq #sordib ja võtab korduvad välja
+cat nimed_2 | sort | uniq #sordib ja võtab korduvad välja
 
 #Kõik \_(:D)_/
 #
