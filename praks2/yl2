@@ -1,11 +1,11 @@
-#!/bin/bash/
+#!/bin/bash
 
-#Muljed aines
+#Kasutaja tervitus
 
-echo "Mihkel Mölder"
-echo "ISP217"
-echo "See aine oli vägagi huvitav, sest õppisin kasutama GitHub-i ja skriptimist veel"
-echo "Ma tahaks veel täpsemalt seda õpetada koos rohkemate ja arusaadavamte juhistega"
+echo -n "Tere "
+echo -n `who am i | cut -c1 | tr [:lower:] [:upper:]` #Esimene täht suureks
+echo -n `who am i | cut -c2- | cut -f1 -d" "` #Lõikab kõik tähed alates teisest
+echo "!"
 
 #Kõik \_(:D)_/
 
