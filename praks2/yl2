@@ -4,10 +4,9 @@
 #
 #Algus
 
-who | cut -f1 -d" " | cut -f2 -d"." > perenimi #Lõikab perenime (2. element)
-who | cut -f1 -d" " | cut -f1 -d"." > eesnimi #Lõikab eesnime (1. element)
-paste -d"." perenimi eesnimi > nimed #kleebib failid järjekorras kokku
-cat nimed | sort | uniq #sordib ja võtab korduvad välja
+who | awk -F 'tty*' '{print $1}' > nimed #nimede otsingu käsk
+nimed | awk -F "." '{print $2"."$1}' nimed_2 #kleebib failid järjekorras kokku
+cat nimed2 | sort | uniq #sordib ja võtab korduvad välja
 
 #Kõik \_(:D)_/
 #
