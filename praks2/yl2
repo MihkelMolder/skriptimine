@@ -1,11 +1,13 @@
 #!/bin/bash
-
+#
 #Kasutaja tervitus
+#
+#Algus
 
-echo -n "Tere "
-echo -n `who am i | cut -c1 | tr [:lower:] [:upper:]` #Esimene täht suureks
-echo -n `who am i | cut -c2- | cut -f1 -d" "` #Lõikab kõik tähed alates teisest
-echo "!"
+who | cut -f1 -d" " | cut -f2 -d"." > perenimi #Lõikab perenime (2. element)
+who | cut -f1 -d" " | cut -f1 -d"." > eesnimi #Lõikab eesnime (1. element)
+paste -d"." perenimi eesnimi > nimed #kleebib failid järjekorras kokku
+cat nimed | sort | uniq #sordib ja võtab korduvad välja
 
 #Kõik \_(:D)_/
-
+#
