@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#Algus
+#
+
+echo `find /var/ -name *.log 2>> /dev/null`
+
+#
+#Lõpp
+
