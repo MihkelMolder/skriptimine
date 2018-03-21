@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+#Algus
+#
+#Kuupäev
+echo -n "Today is "
+
+echo -n `date | cut -f1 -d" "`
+echo -n ", "
+
+echo -n `date | cut -f2 -d" "`
+echo -n " "
+
+echo -n `date | cut -f3 -d" "`
+echo -n ", "
+
+echo `date | cut -f6 -d" "`
+
+#Kellaaeg
+echo -n "Time is "
+
+#Kellaaeg
+echo -n `date | cut -f4 -d" " | cut -f1 -d":"`
+echo -n ":"
+echo  `date | cut -f4 -d" " | cut -f2 -d":"`
+
+#kalender
+cal
+
+#
+#Lõpp
+#
