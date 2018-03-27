@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#Algus
+#
+echo -n "Mis on sinu ees- ja perenimi?  " #Küsib nime
+read eesnimi perenimi # loeb nimesid
+echo "Sisestasite enda eesnimeks $eesnimi ning perenimeks $perenimi." # Esitab nimed
+#
+#Lõpp
+#
