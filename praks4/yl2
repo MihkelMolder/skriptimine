@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+#Algus
+#
+
+echo -n "Kandiku pikkus ja laius sentimeetrites:  " #Küsib pikkust ja laiust cm-s
+read k_pikkus k_laius #Kasutaja vastus
+
+#Küpsise andmed:
+echo -n "Küpsise pikku ja laius sentimeetrites:  " #Küsib küpsiste andmeid
+read kypsPikkus kypsLaius #Kasutaja küpsise andmete vastus
+echo -n "Küpsise arv pakis:  " #Küsib küpsiste arvu hulka
+read kypsArv #Kasutaja vastus
+
+#Kihtide arv
+echo -n "Tordi kihtide arv:  " #Küsib tordi kihtide arvu
+read kihtideArv #Kasutaja vastus
+
+#Arvutamine
+
+#Kandiku pindala
+kandik=`expr $k_pikkus \* $k_laius`
+
+#Küpsise pindala
+kypsis=`expr $kypsPikkus \* $kypsLaius`
+
+#Mitu küpsist mahub üghe kandiku peale ühes kihis - Kandik / küpsis
+kiht=`expr $kandik / $kypsis`
+
+#Kokku küpsiseid ühes tordis - küpsiste arv kihis * kihtide arv
+kypsKokku=`expr $kiht \* $kihtideArv`
+
+#Pakkide arvu saamine - Küpsised / pakkides olevate küpsiste arv
+pakkArv=`expr $kypsKokku / $kypsArv`
+
+#kasutamata küpsiste arvo on jääk kõikidest küpsistest, kui nad on jagatud pakkide vahel
+jaak=`expr $kypsKokku % $kypsArv`
+
+#TULEMUS
+echo "Kokku on vaja $pakkArv pakki küpsiseid ja $jaak küpsiseid!"
+
+
+#
+#Lõpp
+#
