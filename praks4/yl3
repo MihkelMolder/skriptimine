@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#Algus
+#
+
+echo -n "Mitu reisijat on grupis?  "
+read reisijad
+echo -n "Mitu kohta on bussis?  "
+read kohta
+bussist_ilma_jaab=`expr $reisijad % $kohta`
+echo "Bussist jääb maha $bussist_ilma_jaab tegelast."
+
+#
+#Lõpp
+#
