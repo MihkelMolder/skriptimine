@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#Algus
+#
+
+echo -n "Sisestage palun üks arv: "
+read arv
+
+#Arvutamine
+jaak=$(( $arv % 2 ))
+
+#IF osa
+
+if [ $jaak -eq 0 ]
+then
+	echo "Arv on paarisarv"
+else
+	echo "Arv on paarituarv"
+fi
+
+#
+#Lõpp
+#
