@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#Algus
+#
+
+echo -n "Mitu reisijat on grupis?  "
+read reisijad
+echo -n "Mitu kohta on bussis?  "
+read kohta
+
+#aArvutamine
+bussid=$(($reisijad / $kohta))
+
+bussist_ilma_jaab=`expr $reisijad % $kohta`
+
+#IF osa
+if [ $bussist_ilma_jaab -gt 0 ]
+then
+	bussid=$(($bussid + 1))
+fi
+
+#Viimane käsk
+echo "Kokku on vaja $bussid bussi, et kõik saaksid tulla."
+
+#
+#Lõpp
+#
