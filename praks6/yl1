@@ -3,11 +3,8 @@
 #Algus
 #
 
-echo -n "Sisestage palun üks arv: "
-read arv
-
 #Arvutamine
-jaak=$(( $arv % 2 ))
+jaak=$(( $1 % 2 ))
 
 #IF osa
 
