@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+#Algus
+#
+#Aja teade
+
+echo -e "Sisesta aeg tundides: \c"
+read aeg
+
+###If osa
+
+if [ $aeg -ge 6 -a $aeg -lt 12 ]; then
+	echo "Tere hommikust!"
+elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then
+	echo "Tere päevast!"
+elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then
+	echo "Õhtust."
+elif [ $aeg -ge 22 -a $aeg -lt 24 ]; then
+	echo "Head ööd!"
+elif [ $aeg -ge 24 -a $aeg -lt 6 ]; then
+	echo "Mine magama!"
+else
+	echo "Viga!"
+fi
+
+#
+#Lõpp
+#
