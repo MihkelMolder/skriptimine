@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#Kuu number
+#
+
+echo -n "Sisetage palun kuu number: "
+read kuu
+case $kuu in
+	"1") echo "See on jaanuari kuu!";;
+	"2") echo "Too on veebruar!";;
+	"3") echo "Märts,";;
+	"4") echo "Aprilli kuu, nalja juu!";;
+	"5") echo "Mai kuu see on.";;
+	"6") echo "Juuni, esimene suve kuu!!!";;
+	"7") echo "Juuli on ka suve kuu!";;
+	"8") echo "August, viimane suve kuu...";;
+	"9") echo "September, esimene kooli päev... jälle.";;
+	"10") echo "Oktoober....";;
+	"11") echo "November on Mardijooksimsed.";;
+	"12") echo "Detsembri kuu, jõulud!!!";;
+	*) echo "E5505";;
+esac
+sleep 1
+
+#
+#Lõpp
+#
