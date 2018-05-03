@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#10 esimese parisarvude summa
+#
+
+summa=0 ##Sätib algse summa valmis, millest tuleb alustada
+
+for arv in {1..10}
+do
+	jaak=$(($arv % 2))
+	if [ $jaak -eq 0 ]
+	then
+		summa=$(($summa + $arv))
+		echo $summa
+		sleep 1
+	fi
+done
+echo "Vahemikus 1 kuni 10 arvude paarisarvu summa on $summa!"
