@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+#Reisist tagasi tulek
+#
+
+##Küsimused
+echo -n "Sisestage millal sõidad ära{pühap. - 0; esmasp. - 1 ; ...}: "
+read algus
+
+echo -n "Sisestage reisi ööpäevade arv: "
+read paevad
+
+###Arvutamine
+
+veel=$(($paevad % 7))
+tagasi=$(($algus + $veel))
+
+###Vastuse esitamine
+
+echo "Tagasi olete päeval number $tagasi"

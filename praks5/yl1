@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#Hüpotenuus
+#
+echo "Hüpotenuusi leidmine"
+
+echo -n "Sisestage a külje pikkus: "
+read a
+
+echo -n "Nüüd sisestage külje b pikkus: "
+read b
+
+###Arvutamine
+####A
+a2=$(($a * $a))
+####B
+b2=$(($b * $b))
+####C
+c2=$(($a2 + $b2))
+c=`echo "scale=2;sqrt($c2)" | bc`
+
+###Vastus
+echo "Hüpotenuus on $c"
+

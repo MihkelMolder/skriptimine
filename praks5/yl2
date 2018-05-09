@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#Pindala
+#
+##Küsimus
+echo -n "Sisestage külje a pikkus: "
+read a
+echo -n "Sisestabe b külje pikkus: "
+read b
+echo -n "Ja nüüd külje c pikkus: "
+read c
+
+###S=pindala
+
+s=$( echo "scale=2;($a+$b+$c)/2" | bc )
+####Ruutjuures olev avaldis
+
+echo "Pindala on $s"
