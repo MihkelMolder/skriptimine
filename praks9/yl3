@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+#
+
+echo -n "Sisesta ridade arv: "
+read rida
+echo -n "Sisesta tärnide arv: "
+read mitu
+
+###
+
+eel=$(($rida - 1))
+veel=$(($eel - 1))
+
+for (( i = 1; i <= $rida; i++ ))
+do
+	for (( j = 1; j <= 1; j++ ))
+	do
+		echo -n "$i. "
+	done
+	for (( z = 1; z <= $mitu; z++ )) ###kordab stüklit mitu tärni
+	do
+		if [ i -gt 2 -a i -lt $ell ] ###Kui on teine kuni eelviimane rida
+		then
+			echo -n "*"
+			for (( s = 1; s <= $veel; s++ )) ###Kui võrdub või on vähem kui kaks miinus tärnide arv
+			do
+				echo -n " "
+			done
+			echo -n "*"
+			z = $mitu
+		else
+			echo -n "*"
+		fi
+	done
+	echo ""
+done
